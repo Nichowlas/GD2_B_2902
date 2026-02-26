@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="stylesheeet.css" />
+</head>
+<body>
+<div id="batikPreloader" class="loader-wrapper">
+    <div class="batik-flower-loader">
+        <div class="bloom-layer layer-1"></div>
+        <div class="bloom-layer layer-2"></div>
+        <div class="bloom-layer layer-3"></div>
+        <div class="flower-core"></div>
+    </div>
+</div>
+    <header>
+        <div class="header-left-side">
+            <h1>
+                Nicholas Juan <br/> 
+                Limartha 
+            </h1>
+            
+            <h2>- Secret</h2> 
+
+            <p>
+                Saya adalah seorang mahasiswa semester 4 Universitas Atma Jaya Yogyakarta dengan antusiasime dalam bidang UI/UX dan dunia digital.
+                Saya berfokus pada mencari kesempatan untuk memecahkan masalah kompleks dengan solusi yang efisien. 
+                Dalam setiap proyek, saya menggabungkan keahlian teknis dan pemahaman bisnis untuk memberikan hasil kerja yang berdampak nyata.
+            </p>
+
+            <button>UI/UX Design</button>
+            <button class="btn-experience">Experience</button>
+            <button>VIEW PROJECT</button> 
+            <br /><br />
+            <button>CV</button>
+            <button>CONTACT PERSON</button> 
+            <br /><br />
+
+            <h3>
+                NICHOLAZ © 2026
+            </h3>
+        </div>
+
+        <div class="header-right-side">
+            <img src="nganu.png" alt="Foto Profil" />
+        </div>
+    </header>
+<script>
+// Menunggu seluruh elemen halaman (gambar, css, dll) selesai dimuat
+window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    
+    // Menambahkan sedikit jeda (1 detik) agar animasi yang elegan sempat terlihat
+    setTimeout(function() {
+        preloader.classList.add("preloader-hidden");
+    }, 1000); 
+    });
+</script>
+<script>
+    window.addEventListener("load", function () {
+        const preloader = document.getElementById("batikPreloader");
+        // Jeda 1.5 detik agar efek mekar sempat dinikmati audiens
+        setTimeout(function() {
+            preloader.classList.add("loader-hidden");
+        }, 900); 
+    });
+</script>
+</body>
+</html>

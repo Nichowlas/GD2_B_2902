@@ -1,0 +1,311 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:wght@600;700&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+    color: black;
+    background-color: #bea060;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+.header-left-side {
+    padding: 0 90px;
+    color: white;
+    width: 60%;
+}
+
+.header-left-side h1 {
+    font-size: 70px;
+    margin: 20px 0;
+    font-weight: 400;
+    
+    /* --- Efek Gradasi Teks --- */
+    background: linear-gradient(45deg, #bea060, #99b9c5); /* Ubah warna di sini */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback */
+}
+
+.header-left-side h2 {
+    color: #bea060;
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.header-left-side p {
+    margin: 30px 0;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: #c1bfbf;
+    line-height: 1.8;
+}
+
+/* BUTTON */
+button {
+    padding: 10px;
+    border: 2px solid #3f3d92;
+    background: transparent;
+    width: 200px;
+    color: white;
+    margin-right: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #99b9c5;
+    color: black;
+}
+
+.btn {
+    background-color: #bea060;
+    color: black;
+    font-weight: bold;
+}
+
+.header-left-side h3 {
+    margin-top: 20px;
+    color: #b3b3b3;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+}
+
+/* RIGHT SIDE */
+.header-right-side {
+    width: 40%;
+    height: 100%;
+}
+
+.header-right-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Class khusus untuk tombol Experience */
+.btn-experience {
+    background-color: #1e3a8a; /* Warna background biru elegan */
+    color: white;
+    border: 2px solid #1e3a8a; /* Menyesuaikan warna border dengan background */
+}
+
+/* Menimpa efek hover agar warna tetap statis */
+.btn-experience:hover {
+    background-color: #1e3a8a; 
+    color: white;
+    /* Efek transisi tetap ada di <button> utama, 
+       tapi karena warnanya sama, tombol akan terlihat statis */
+}
+/* =========================================
+   ANIMASI LOADING (PRELOADER) - BATIK STYLE
+   ========================================= */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black; /* Mengikuti tema gelap website Anda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+.batik-loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+/* Cincin luar - motif memutar */
+.batik-loader::before,
+.batik-loader::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2.5s linear infinite;
+}
+
+.batik-loader::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent;
+    /* Kombinasi warna dari batik: Biru gelap, Biru muda, Emas */
+    border-top-color: #1e3a8a; 
+    border-bottom-color: #99b9c5; 
+    border-right-color: #bea060; 
+    border-left-color: rgba(30, 58, 138, 0.3);
+    animation-duration: 3s;
+}
+
+/* Cincin dalam - motif putus-putus */
+.batik-loader::after {
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    border: 3px dashed #99b9c5;
+    animation-direction: reverse;
+    animation-duration: 2s;
+}
+
+/* Inti tengah */
+.batik-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: #bea060;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #1e3a8a, 0 0 10px #99b9c5;
+    animation: pulseBatik 1.5s ease-in-out infinite;
+}
+
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black; /* Latar gelap menyesuaikan tema */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.batik-flower-loader {
+    position: relative;
+    width: 80px; 
+    height: 80px;
+}
+
+/* Base style untuk lapisan yang akan mekar */
+.bloom-layer {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    opacity: 0;
+}
+
+/* Membentuk 8 kelopak bunga batik menggunakan ::before dan ::after */
+.bloom-layer::before, 
+.bloom-layer::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    /* Trik CSS: Membuat bentuk kelopak tajam ala motif floral batik */
+    border-radius: 50% 0 50% 0; 
+    border: 4px solid #1e3a8a; /* Biru Gelap dari referensi */
+}
+
+/* Memutar elemen ::after sebesar 45 derajat untuk melengkapi 8 sisi kelopak */
+.bloom-layer::after {
+    transform: rotate(45deg);
+}
+
+/* -- PENGATURAN DELAY MEKAR AGAR BERKESINAMBUNGAN -- */
+
+/* Lapisan 1: Kelopak Terluar */
+.layer-1 {
+    animation: mekarBatik 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Lapisan 2: Kelopak Tengah (delay 1 detik, aksen putus-putus) */
+.layer-2 {
+    animation: mekarBatik 3s cubic-bezier(0.16, 1, 0.3, 1) infinite 1s;
+}
+.layer-2::before, .layer-2::after {
+    border-color: #99b9c5; /* Biru Muda */
+    border-width: 2px;
+    border-style: dashed; /* Memberi tekstur isen-isen batik */
+}
+
+/* Lapisan 3: Kelopak Terdalam (delay 2 detik) */
+.layer-3 {
+    animation: mekarBatik 3s cubic-bezier(0.16, 1, 0.3, 1) infinite 2s;
+}
+.layer-3::before, .layer-3::after {
+    border-color: #bea060; /* Aksen Emas/Krem */
+    border-width: 1px;
+}
+
+/* -- ANIMASI UTAMA: BERMEKARAN -- */
+@keyframes mekarBatik {
+    0% {
+        transform: scale(0) rotate(0deg); /* Kuncup kecil */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotate(90deg); /* Membesar dan meluas (mekar) */
+        opacity: 0; /* Menghilang dengan halus di ukuran maksimal */
+    }
+}
+
+/* -- INTI BUNGA (Berdenyut di tengah) -- */
+.flower-core {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px; 
+    height: 12px;
+    background-color: #bea060;
+    border-radius: 50%;
+    animation: denyutInti 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes denyutInti {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.7; }
+    100% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; box-shadow: 0 0 20px #99b9c5; }
+}
+
+/* Class untuk menghilangkan loader saat halaman selesai */
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
